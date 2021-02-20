@@ -1,0 +1,34 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@mixin icon ($width, $height, $top, $left) {
+	content: "";
+	display: block;
+	position: absolute;
+	width: #{$width};
+	height: #{$height};
+	top: #{$top};
+	left: #{$left};
+}
+
+$white: #fff;
+$black: #000;
+$yellow: #EBEF3C;
+$logo: #FFD600;
+$dardk-gray: #E2E2E2;
+$ligth-gray: #C4C4C4;
+$placeholder: #b9b9b9;
+$price-bg: #F6F6F6;
+
+$cards-color: (
+	blue: #4581C7,
+	green: #6FB768,
+	red	: #BF5353,
+);
