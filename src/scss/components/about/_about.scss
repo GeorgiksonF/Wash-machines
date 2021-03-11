@@ -1,0 +1,13 @@
+.about {
+
+	&__header {
+		padding-top: 80px;
+	}
+
+	&__features {
+		display: flex;
+		justify-content: space-between;
+		margin: 120px 0 45px;
+	}
+
+}

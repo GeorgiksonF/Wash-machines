@@ -1,0 +1,19 @@
+.logo {
+    display: flex;
+	align-items: center;
+	font-weight: 900;
+	text-transform: uppercase;
+	width: 170px;
+
+	&__img {
+		margin-right: 7px;
+	}
+
+	&__text {
+		line-height: 26px;
+	}
+
+	&__style {
+		color: $logo;
+	}
+}

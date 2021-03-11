@@ -1,22 +1,22 @@
-let { src, dest } = require('gulp'),
-	gulp = require('gulp'),
-	browsersync = require("browser-sync").create(),
-	fileinclude = require("gulp-file-include"),
-	del = require("del"),
-	scss = require("gulp-sass"),
-	autoprefixer = require("gulp-autoprefixer"),
-	group_media = require("gulp-group-css-media-queries"),
-	clean_css = require("gulp-clean-css"),
-	rename = require("gulp-rename"),
-	uglify = require("gulp-uglify-es").default,
-	imagemin = require("gulp-imagemin"),
-	webp = require('gulp-webp'),
-	webphtml = require('gulp-webp-html'),
-	webpcss = require("gulp-webpcss"),
-	svgSprite = require('gulp-svg-sprite'),
-	ttf2woff = require('gulp-ttf2woff'),
-	ttf2woff2 = require('gulp-ttf2woff2'),
-	fonter = require('gulp-fonter');
+const { src, dest } = require('gulp');
+const gulp = require('gulp');
+const browsersync = require("browser-sync").create();
+const fileinclude = require("gulp-file-include");
+const del = require("del");
+const scss = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
+const group_media = require("gulp-group-css-media-queries");
+const clean_css = require("gulp-clean-css");
+const rename = require("gulp-rename");
+const uglify = require("gulp-uglify-es").default;
+const imagemin = require("gulp-imagemin");
+const webp = require('gulp-webp');
+const webphtml = require('gulp-webp-html');
+const webpcss = require("gulp-webpcss");
+const svgSprite = require('gulp-svg-sprite');
+const ttf2woff = require('gulp-ttf2woff');
+const ttf2woff2 = require('gulp-ttf2woff2');
+const fonter = require('gulp-fonter');
 
 let project_folder = "dest";
 let source_folder = "src";
@@ -33,7 +33,7 @@ let path = {
 	},
 	src: {
 		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
-		css: source_folder + "/scss/style.scss",
+		css: source_folder + "/scss/main.scss",
 		js: source_folder + "/js/script.js",
 		img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
 		fonts: source_folder + "/fonts/*.ttf",
@@ -148,9 +148,9 @@ gulp.task('svgSprite', function () {
 })
 
 function fontsStyle() {
-	let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
+	let file_content = fs.readFileSync(source_folder + '/scss/_fonts.scss');
 	if (file_content == '') {
-		fs.writeFile(source_folder + '/scss/fonts.scss', '', cb);
+		fs.writeFile(source_folder + '/scss/_fonts.scss', '', cb);
 		return fs.readdir(path.build.fonts, function (err, items) {
 			if (items) {
 				let c_fontname;
@@ -158,7 +158,7 @@ function fontsStyle() {
 					let fontname = items[i].split('.');
 					fontname = fontname[0];
 					if (c_fontname != fontname) {
-						fs.appendFile(source_folder + '/scss/fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
+						fs.appendFile(source_folder + '/scss/_fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
 					}
 					c_fontname = fontname;
 				}

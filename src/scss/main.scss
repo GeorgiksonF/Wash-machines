@@ -1,0 +1,79 @@
+@import "reset";
+@import "variables";
+@import "fonts";
+@import "base";
+
+@import "./components/header/header";
+@import "./components/header/header-wrap";
+@import "./components/header/logo";
+@import "./components/header/nav";
+
+@import "./components/offer/offer";
+@import "./components/offer/arrow";
+
+@import "./components/about/about";
+@import "./components/about/content";
+@import "./components/about/cards";
+
+@import "./components/price/price";
+@import "./components/price/table";
+
+@import "./components/album/album";
+
+@import "./components/contact/contact";
+@import "./components/contact/form";
+@import "./components/contact/phone";
+
+@import "./components/footer/footer";
+
+/* Container */
+
+.container {
+	max-width: 1270px;
+	margin: 0 auto;
+	padding: 0 50px;
+}
+
+/* User Styles */
+
+.btn {
+	font-weight: 500;
+	font-size: 24px;
+	color: $black;
+	height: 70px;
+	background: linear-gradient(104.54deg, #E3E65E 33.56%, #EAEE3C 68.53%);
+	border-radius: 90px;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.section-header {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 570px;
+	
+	&__title {
+		position: relative;
+		font-size: 36px;
+		font-weight: 700;
+		text-transform: uppercase;
+		max-width: 370px;
+		margin: 0 auto;
+		
+		&::after {
+			content: "";
+			display: block;
+			position: relative;
+			width: 100px;
+			height: 2px;
+			background: $yellow;
+			top: 20px;
+			left: calc(50% - 50px);
+		}
+	}
+
+	&__text {
+		margin-top: 50px;
+		line-height: 30px;
+	}
+}

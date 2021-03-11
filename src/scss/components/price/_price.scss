@@ -1,0 +1,10 @@
+
+.price {
+	background: $price-bg;
+	border-top: 2px solid $ligth-gray;
+	overflow: hidden;
+	
+	&__header {
+		padding-top: 85px;
+	}
+}

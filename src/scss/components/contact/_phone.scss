@@ -1,0 +1,29 @@
+.phone {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 85px 0 254px;
+	
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+
+	&__number {
+		color: $white;
+		font-size: 36px;
+	}
+
+	&__icon {
+		width: 40px;
+		height: 40px;
+		margin-right: 20px;
+		background: url("../../dest/img/svg/call-white.svg") no-repeat center center / cover;
+	}
+
+	&__btn,
+	&__item {
+		flex-basis: 360px;
+	}
+}

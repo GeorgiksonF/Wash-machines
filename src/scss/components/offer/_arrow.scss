@@ -1,0 +1,24 @@
+.arrow {
+    position: relative;
+    height: 1px;
+    margin: 205px auto 90px auto;
+    height: 40px;
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        transform: rotate(-45deg);
+        border-left: 2px solid $white;
+        border-bottom: 2px solid $white;
+        top: 0;
+        left: calc(50% - 15px);
+    }
+
+    &::before {
+        top: -20px;
+    }
+}
