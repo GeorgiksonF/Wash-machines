@@ -1,0 +1,11 @@
+.galery {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 110px;
+    
+    &__grid {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}

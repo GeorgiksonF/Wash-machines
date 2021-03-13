@@ -1,0 +1,75 @@
+.picture {
+    cursor: pointer;
+    position: relative;
+    border-radius: 9px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    max-width: 370px;
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+   
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        opacity: 0;
+        z-index: 20;
+        border-radius: 9px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../../dest/img/svg/visibility.svg") no-repeat center,
+                    linear-gradient(180deg, rgba(12, 12, 12, 0.85) 0%, rgba(80, 80, 80, 0.5) 100%);
+    }
+    
+    &:hover::after {
+        opacity: 1;
+        transition: .3s;
+    }
+
+    // @each $item, $height, $shadow in $galery {
+    //     &--#{$item} {
+    //         height: $height;
+    //         box-shadow: $shadow;
+    //     }
+    // }
+
+    &--first {
+        height: 470px;
+        box-shadow: 4px 4px 30px rgba(129, 130, 55, 0.2);
+    }
+    
+    &--second {
+        height: 290px;
+        box-shadow: 4px 8px 30px rgba(150, 144, 141, 0.2);
+    }
+    
+    &--third {
+        height: 280px;
+        box-shadow: 4px 4px 30px rgba(220, 217, 224, 0.2);
+    }
+    
+    &--fourth {
+        height: 480px;
+        box-shadow: 2px 4px 30px rgba(94, 1, 0, 0.2);
+    }
+    
+    &--fifth {
+        height: 350px;
+        box-shadow: 2px 4px 30px rgba(227, 167, 82, 0.2);
+    }
+    
+    &--sixth {
+        height: 410px;
+        box-shadow: 2px 6px 30px rgba(67, 110, 187, 0.2);
+    }
+}

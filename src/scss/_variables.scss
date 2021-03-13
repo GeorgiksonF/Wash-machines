@@ -32,3 +32,16 @@ $cards-color: (
 	green: #6FB768,
 	red	: #BF5353,
 );
+
+$galery: (
+	item: (first, second, third, fourth, fifth, sixth),
+	heihgt: (470px, 290px, 280px, 480px, 350px, 410px),
+	shadow: (
+		4px 4px 30px rgba(129, 130, 55, 0.2),
+		4px 8px 30px rgba(150, 144, 141, 0.2),
+		4px 4px 30px rgba(220, 217, 224, 0.2),
+		2px 4px 30px rgba(94, 1, 0, 0.2),
+		2px 4px 30px rgba(227, 167, 82, 0.2),
+		2px 6px 30px rgba(67, 110, 187, 0.2)
+	)
+)

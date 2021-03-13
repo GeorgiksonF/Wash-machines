@@ -1,0 +1,30 @@
+.section-header {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 570px;
+	
+	&__title {
+		position: relative;
+		font-size: 36px;
+		font-weight: 700;
+		text-transform: uppercase;
+		max-width: 370px;
+		margin: 0 auto;
+		
+		&::after {
+			content: "";
+			display: block;
+			position: relative;
+			width: 100px;
+			height: 2px;
+			background: $yellow;
+			top: 20px;
+			left: calc(50% - 50px);
+		}
+	}
+
+	&__text {
+		margin-top: 50px;
+		line-height: 30px;
+	}
+}
